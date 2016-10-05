@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+    <title>Artboard</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="28" height="28"></rect>
-    </defs>
+    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-2" transform="translate(-159.000000, -176.000000)">
-            <g id="Group" transform="translate(159.000000, 176.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Mask"></g>
-                <circle id="Oval" fill="#F2F2F2" mask="url(#mask-2)" cx="0" cy="0" r="1"></circle>
-                <circle id="Oval-Copy" fill="#F2F2F2" mask="url(#mask-2)" cx="28" cy="0" r="1"></circle>
-                <circle id="Oval-Copy-3" fill="#F2F2F2" mask="url(#mask-2)" cx="0" cy="28" r="1"></circle>
-                <circle id="Oval-Copy-2" fill="#F2F2F2" mask="url(#mask-2)" cx="28" cy="28" r="1"></circle>
-                <circle id="Oval-Copy-2" fill="#F2F2F2" mask="url(#mask-2)" cx="14" cy="14" r="1"></circle>
-            </g>
+        <g id="Artboard">
+            <path d="M9,25 L24,25 L24,40 L9,40 L9,25 Z M8,25 L0,25 L0,24 L8,24 L8,9 L0,9 L0,8 L8,8 L8,-2 L9,-2 L9,8 L24,8 L24,-2 L25,-2 L25,8 L40,8 L40,-1 L41,-1 L41,8 L56,8 L56,-1 L57,-1 L57,8 L72,8 L72,-1 L73,-1 L73,8 L84,8 L84,9 L73,9 L73,24 L84,24 L84,25 L73,25 L73,40 L81,40 L81,41 L73,41 L73,56 L83,56 L83,57 L73,57 L73,72 L83,72 L83,73 L73,73 L73,83 L72,83 L72,73 L57,73 L57,83 L56,83 L56,73 L41,73 L41,82 L40,82 L40,73 L25,73 L25,82 L24,82 L24,73 L9,73 L9,82 L8,82 L8,73 L-1,73 L-1,72 L8,72 L8,57 L-1,57 L-1,56 L8,56 L8,41 L0,41 L0,40 L8,40 L8,25 Z M9,24 L24,24 L24,9 L9,9 L9,24 Z M9,72 L24,72 L24,57 L9,57 L9,72 Z M9,56 L24,56 L24,41 L9,41 L9,56 Z M25,25 L40,25 L40,35 L41,35 L41,25 L56,25 L56,40 L46,40 L46,41 L56,41 L56,56 L41,56 L41,46 L40,46 L40,56 L25,56 L25,41 L35,41 L35,40 L25,40 L25,25 Z M25,24 L40,24 L40,9 L25,9 L25,24 Z M25,72 L40,72 L40,57 L25,57 L25,72 Z M41,57 L56,57 L56,72 L41,72 L41,57 Z M41,24 L56,24 L56,9 L41,9 L41,24 Z M57,9 L72,9 L72,24 L57,24 L57,9 Z M57,25 L72,25 L72,40 L57,40 L57,25 Z M57,41 L72,41 L72,56 L57,56 L57,41 Z M57,57 L72,57 L72,72 L57,72 L57,57 Z" id="Combined-Shape" fill="#F7F7F7" opacity="0.499490489"></path>
+            <path d="M42,39 L42,35 L39,35 L39,39 L35,39 L35,42 L39,42 L39,46 L42,46 L42,42 L46,42 L46,39 L42,39 Z" id="Combined-Shape" fill="#F2F2F2" opacity="0.701483243"></path>
         </g>
     </g>
 </svg>
