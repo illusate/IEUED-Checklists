@@ -3,6 +3,13 @@ html,body{
 	font-family: -apple-system, BlinkMacSystemFont,"Roboto", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "Heiti SC", sans-serif;
 	color:#616161;
 	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-image: url('bg.svg');
+	background-size: 21px 21px;
+	background-repeat: repeat;
 }
 @font-face {
   font-family: 'iconfont';
@@ -60,6 +67,7 @@ html,body{
 	box-sizing: border-box;
 }
 ul#categories{
+	background-color: #FFFFFF;
 	position: relative;
 	opacity: 0;
 	height: 48px;
