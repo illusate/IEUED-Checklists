@@ -8,7 +8,7 @@ html,body{
 }
 body{
 	background-image: url('bg.svg');
-	background-size: 21px 21px;
+	background-size: 81px 81px;
 	background-repeat: repeat;
 }
 @font-face {
