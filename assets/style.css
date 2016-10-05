@@ -1,0 +1,277 @@
+html,body{
+	background-color: #fff;
+	font-family: -apple-system, BlinkMacSystemFont,"Roboto", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "Heiti SC", sans-serif;
+	color:#616161;
+	-webkit-tap-highlight-color: transparent;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfonts/font_1475593550_8572106.eot'); /* IE9*/
+  src: url('iconfonts/font_1475593550_8572106.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfonts/font_1475593550_8572106.woff') format('woff'), /* chrome、firefox */
+  url('iconfonts/font_1475593550_8572106.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfonts/font_1475593550_8572106.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+.clear{
+	clear: both;
+}
+.iconfont{
+	font-family:"iconfont";
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	margin-right: 8px;
+	color:#B3B3B3;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(.3, .3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2,1.2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+
+#header{
+	opacity: 0;
+	width: 100%;
+	font-size:36px;
+	font-weight: 100;
+	text-align: center;
+	margin-top: 56px;
+	margin-bottom: 48px;
+}
+#main{
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 0 24px;
+	box-sizing: border-box;
+}
+ul#categories{
+	position: relative;
+	opacity: 0;
+	height: 48px;
+	border-radius:2px;
+	border:1px #E6E6E6 solid;
+	margin-bottom: 24px;
+	box-shadow: 0 2px 0 0 #F7F7F7;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+}
+ul#categories li{
+	display: block;
+	font-size: 16px;
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 46px;
+	display: block;
+	text-align: center;
+	float: left;
+	padding: 15px;
+	line-height: 16px;
+	border-right:1px #E6E6E6 solid;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+ul#categories li:hover{
+	background-color: #F7F7F7;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+ul#categories li:active{
+	background-color: #E6E6E6;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+ul#categories li:last-child{
+	border-right:0px;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+
+ul#categories .active-line{
+	position: absolute;
+	bottom: 0;
+	height: 3px;
+	background-color: #FFD200;
+}
+ul#categories li.active:active{
+	background-color: #FFFFFF;
+}
+ul#categories li.active:hover{
+	background-color: #FFFFFF;
+}
+
+ul#checklist{
+	opacity: 0;
+	display: block;
+	font-size: 16px;
+	box-sizing: border-box;
+	height: auto;
+	border:1px #E6E6E6 solid;
+	border-radius: 2px;
+	width: 100%;
+	box-shadow: 0 2px 0 0 #F7F7F7;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+}
+ul#checklist li{
+	pointer-events:auto;
+	-webkit-perspective: 1000;
+	display: block;
+	box-sizing: border-box;
+	height: 80px;
+	padding: 16px 24px 16px 24px;
+	border-bottom: 1px #F2F2F2 solid;
+	cursor: pointer;
+	background-color: #FFFFFF;
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+ul#checklist li:hover{
+	background-color: #F7F7F7;
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+ul#checklist li:active{
+	background-color: #E6E6E6;
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+ul#checklist li .item{
+	float: left;
+}
+ul#checklist li:last-child{
+	border-bottom: 0px;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+ul#checklist li .checkbox{
+	border: 1px #ffd200 solid;
+	border-radius: 2px;
+	width: 16px;
+	height: 16px;
+	margin-right: 24px;
+	margin-top: 4px;
+	float: left;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+// ul#checklist li .checkbox:hover{
+// 	background-color: rgba(255,210,0,0.2);
+// 	-webkit-transition: all .15s ease-in-out;
+// 	   -moz-transition: all .15s ease-in-out;
+// 	    -ms-transition: all .15s ease-in-out;
+// 	     -o-transition: all .15s ease-in-out;
+// 	        transition: all .15s ease-in-out;
+// }
+ul#checklist li i{
+	font-size: 0;
+	width:16px;
+	height: 16px;
+	box-sizing: border-box;
+	padding: 0 2px 0 0;
+	color: #4D4D4D !important;
+}
+ul#checklist li.checked i{
+	font-size: 16px;
+	display: block;
+	color:#E6E6E6 !important;
+	animation-name: zoomIn;
+	animation-duration: 0.25s;
+	animation-fill-mode: both;
+	display: block;
+}
+ul#checklist li.checked .item{
+	text-decoration: line-through;
+	color: #E6E6E6;
+}
+ul#checklist li.checked .bottom{
+	text-decoration: line-through;
+	color: #E6E6E6;
+}
+ul#checklist li.checked .checkbox{
+	background-color: #F7F7F7;
+	border:1px #E6E6E6 solid;
+	animation-name: zoomIn;
+	animation-duration: 0.25s;
+	animation-fill-mode: both;
+}
+
+ul#checklist .bottom{
+	color:#B3B3B3;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-top: 4px;
+	font-size: 14px;
+}
+@media only screen and (max-width: 767px) {
+	ul#categories{
+		margin-bottom: 16px;
+	}
+    ul#categories li{
+    	font-size: 12px;
+    }
+    ul#categories li i{
+    	display: none;
+    }
+    #main{
+    	padding: 0 16px;
+    }
+}
+@media only screen and (max-device-width:1024px) {
+	ul#categories li:hover{
+	    background-color: #FFF;
+	}	
+	ul#checklist li:hover{
+		background-color: #FFF;
+	}
+}
+
