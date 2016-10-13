@@ -248,7 +248,7 @@ ul#checklist li i{
 ul#checklist li.checked i{
 	font-size: 16px;
 	display: block;
-	color:#E6E6E6 !important;
+	color:#B3B3B3 !important;
 	animation-name: zoomIn;
 	animation-duration: 0.25s;
 	animation-fill-mode: both;
@@ -256,11 +256,15 @@ ul#checklist li.checked i{
 }
 ul#checklist li.checked .item{
 	text-decoration: line-through;
-	color: #E6E6E6;
+	color: #B3B3B3;
+}
+ul#checklist li.checked a{
+	text-decoration: line-through;
+	color: #B3B3B3 !important;
 }
 ul#checklist li.checked .bottom{
 	text-decoration: line-through;
-	color: #E6E6E6;
+	color: #B3B3B3;
 }
 ul#checklist li.checked .checkbox{
 	background-color: #F7F7F7;
