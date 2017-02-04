@@ -165,7 +165,7 @@ $(document).ready(function() {
 	},100);
 	setTimeout(function(){
 		var $checklist = $('#checklist');
-		$checklist.append(insertChecklist(userChecklists[0])).animate({'opacity': 1},250);
+		$checklist.append(insertChecklist(userChecklists[0],0)).animate({'opacity': 1},250);
 	},200);
 });
 $(document).on('click','#categories li',function(){
@@ -184,7 +184,7 @@ $(document).on('click','#categories li',function(){
 			var $checklist = $('#checklist');
 			$checklist.fadeOut('75', function() {
 				$checklist.children().remove();
-				$checklist.append(insertChecklist(userChecklists[$n])).fadeIn('75');
+				$checklist.append(insertChecklist(userChecklists[$n],$n)).fadeIn('75');
 			});
 		},0);
 	}
@@ -192,23 +192,56 @@ $(document).on('click','#categories li',function(){
 $(document).on('click','#checklist li.normal',function(){
 	if(ismoving !== true){
 		$this = $(this);
+		var arrayIndex = $this.attr('array-index');
+		var itemIndex = $this.attr('item-index');
+		var storage = readLocalStorage();
+		if (storage[arrayIndex][itemIndex] === "checked"){
+			storage[arrayIndex][itemIndex] = "unchecked";
+		}else{
+			storage[arrayIndex][itemIndex] = "checked";
+		};
+		writeLocalStorage(storage);
 		$this.toggleClass('checked');
 		setTimeout(function(){
 			ismoving = false;
 		},250);
 	}
 });
-function insertChecklist(array){
-	var checklistHTML = "";
-	for (var i = 0; i < array.length; i++) {
-		if (array[i][0] === true ){
-			var newItem = '<li class="normal"><div class="top"><div class="checkbox"><i class="iconfont">&#xe604;</i></div><div class="item">' + array[i][1] + '</div><div class="clear"></div></div><div class="bottom">' + array[i][2] + '</div></li>';
-		}else{
-			var newItem = '<li class="separator">' + array[i][1] + '</li>'
-		}
-		checklistHTML = checklistHTML + newItem;
+$(document).on('click','.clear-storage',function(){
+	if(confirm("刷新或者下次重启页面将丢失勾选记录。是否确定清除？")){
+		localStorage.removeItem('checklist');
+		location.reload();
 	}
+});
+function insertChecklist(array,arrayIndex){
+	var checklistHTML = "";
+	var isChecked = "";
+	var arrayIndexString = arrayIndex.toString();
+	var storage = readLocalStorage();
+	if (!!!storage[arrayIndexString]){
+		storage[arrayIndexString] = new Object();
+	}
+	for (var itemIndex = 0; itemIndex < array.length; itemIndex++) {
+		if (array[itemIndex][0] === true ){
+			var itemIndexString = itemIndex.toString();
+			if (!!!storage[arrayIndexString][itemIndexString]){
+				storage[arrayIndexString][itemIndexString] = "unchecked";
+			}else{
+				if (storage[arrayIndexString][itemIndexString] ==="checked"){
+					isChecked = " checked";
+				}else{
+					isChecked = "";
+				}	
+			}
+			var newItem = '<li class="normal' + isChecked + '" array-index="' + arrayIndexString + '" item-index="' + itemIndexString + '"><div class="top"><div class="checkbox"><i class="iconfont">&#xe604;</i></div><div class="item">' + array[itemIndex][1] + '</div><div class="clear"></div></div><div class="bottom">' + array[itemIndex][2] + '</div></li>';
+		}else{
+			var newItem = '<li class="separator">' + array[itemIndex][1] + '</li>'
+		}
+		checklistHTML += newItem;
+	}
+	writeLocalStorage(storage);
 	return checklistHTML;
+
 }
 function insertCategories(array){
 	var categoriesHTML = "";
@@ -217,5 +250,15 @@ function insertCategories(array){
 	}
 	return categoriesHTML;
 }
-
-
+function readLocalStorage(){
+	if(!!localStorage.getItem('checklist')){
+		var storage = localStorage.getItem('checklist');
+		return JSON.parse(storage);
+	}else{
+		var storage = new Object();
+		return storage;
+	}
+}
+function writeLocalStorage(storage){
+	localStorage.setItem('checklist', JSON.stringify(storage));
+}

@@ -281,6 +281,53 @@ ul#checklist .bottom{
 	padding-top: 4px;
 	font-size: 14px;
 }
+.clear-storage{
+	margin: 32px auto;
+	width: 128px;
+	height: 48px;
+	border-radius: 4px;
+	border: 1px #E6E6E6 solid;
+	color: #737373;
+	font-size: 14px;
+	box-sizing: border-box;
+	line-height: 14px;
+	padding-top: 16px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 2px 0 0 #F7F7F7;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+.clear-storage:hover{
+	border:1px #FDCA39 solid;
+	background-color: #ffd200;
+	color: #2d2d2d;
+	cursor: pointer;
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
+.clear-storage:active{
+	border:1px #FDCA39 solid;
+	background-color: #F1C600;
+	color: #2d2d2d;
+	cursor: pointer;
+	box-shadow: 0 0px 0 0 #F7F7F7;
+	-webkit-transition: all .15s ease-in-out;
+	   -moz-transition: all .15s ease-in-out;
+	    -ms-transition: all .15s ease-in-out;
+	     -o-transition: all .15s ease-in-out;
+	        transition: all .15s ease-in-out;
+}
 @media only screen and (max-width: 767px) {
 	ul#categories{
 		margin-bottom: 16px;
